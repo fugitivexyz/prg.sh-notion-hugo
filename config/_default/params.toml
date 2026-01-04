@@ -20,7 +20,7 @@ mainSections = ["posts"]
 # Author configuration
 [author]
   name = ""
-  image = "/images/avatar.webp"
+  image = ""
   headline = ""
   bio = ""
   links = []
