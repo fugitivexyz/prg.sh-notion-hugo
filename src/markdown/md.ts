@@ -127,7 +127,9 @@ export const equation = (expression: string) => {
   return `\\[${expression}\\]`;
 };
 
-function textRichText(text: RichTextItemResponseCommon & TextRichTextItemResponse): string {
+function textRichText(
+  text: RichTextItemResponseCommon & TextRichTextItemResponse,
+): string {
   const annotations = text.annotations;
   let content = text.text.content;
   if (annotations.bold) {

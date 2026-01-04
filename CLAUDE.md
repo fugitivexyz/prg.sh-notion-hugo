@@ -48,8 +48,7 @@ npm run format
 ### Configuration Files
 
 - **notion-hugo.config.ts** - User config: `base_url`, `mount` settings (page_url or manual page/database IDs)
-- **config/_default/** - Hugo site config (theme: DoIt)
-- **config/DoIt/** - Theme-specific overrides
+- **config/_default/** - Hugo site config (Blowfish theme via Hugo modules)
 
 ### Key Behaviors
 
@@ -60,3 +59,11 @@ npm run format
 ## Environment Variables
 
 - `NOTION_TOKEN` - Required. Notion integration token with Read Content and Read user info permissions
+
+## Active Technologies
+
+- **TypeScript 5.9** - Sync pipeline (`src/`)
+- **Hugo 0.110+** - Static site generator
+- **Go 1.21+** - Hugo modules
+- **Blowfish v2** - Hugo theme (`github.com/nunocoracao/blowfish/v2`)
+- **Cloudflare Pages** - Hosting with edge functions for Notion file proxy

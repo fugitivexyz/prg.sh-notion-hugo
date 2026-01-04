@@ -30,10 +30,10 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     draft: false,
   };
 
-  // set featuredImage
+  // set featureimage (Blowfish theme uses lowercase field name)
   const featuredImageLink = await getCoverLink(page.id, notion);
   if (featuredImageLink) {
-    frontMatter.featuredImage = featuredImageLink;
+    frontMatter.featureimage = featuredImageLink;
   }
 
   // map page properties to front matter
@@ -74,6 +74,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
           break;
         case "status":
           if (response.status) frontMatter[property] = response.status.name;
+          break;
         // ignore these properties
         case "last_edited_by":
         case "last_edited_time":
@@ -108,6 +109,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
           case "rich_text":
             frontMatter[property] = frontMatter[property] || "";
             frontMatter[property] += result.rich_text.plain_text;
+            break;
           // ignore these
           case "relation":
           case "title":
