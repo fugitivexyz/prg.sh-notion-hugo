@@ -111,7 +111,7 @@
 
 ### Verification for User Story 4
 
-- [ ] T026 [US4] Verify no changes were made to functions/api.ts (should remain unchanged)
+- [x] T026 [US4] Verify no changes were made to functions/api.ts (should remain unchanged)
 - [ ] T027 [US4] Open a blog post with Notion-hosted images and verify images display correctly
 - [ ] T028 [US4] Inspect network requests to confirm images load via `/api?block_id=xxx` endpoint
 
