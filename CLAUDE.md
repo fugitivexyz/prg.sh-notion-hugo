@@ -60,3 +60,10 @@ npm run format
 ## Environment Variables
 
 - `NOTION_TOKEN` - Required. Notion integration token with Read Content and Read user info permissions
+
+## Active Technologies
+- TypeScript 5.9 (sync pipeline), Hugo 0.110+ (static site generator), Go 1.12+ (Hugo modules) + `@notionhq/client`, Hugo, Blowfish theme v2 (`github.com/nunocoracao/blowfish/v2`) (001-blowfish-theme)
+- File-based (Markdown content in `content/`, config in `config/_default/`) (001-blowfish-theme)
+
+## Recent Changes
+- 001-blowfish-theme: Added TypeScript 5.9 (sync pipeline), Hugo 0.110+ (static site generator), Go 1.12+ (Hugo modules) + `@notionhq/client`, Hugo, Blowfish theme v2 (`github.com/nunocoracao/blowfish/v2`)
