@@ -137,13 +137,13 @@ This sentiment captures a growing frustration in the AI development community. I
 ### 1. Your Framework Doesn't Need to Be 100,000 Lines Long
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-802c-a83a-df4e397544f0)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-802c-a83a-df4e397544f0)
 
 
 **The core philosophy of Pocket Flow is that complex LLM systems are fundamentally just "simple directed graphs."** Instead of building layer upon layer of abstraction, the framework provides three simple, powerful building blocks, much like a well-organized kitchen:
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-805e-bf9f-e2f4323bfb89)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-805e-bf9f-e2f4323bfb89)
 
 - **Nodes:** These are the individual work stations where a specific task happens, like chopping vegetables or cooking a dish. Each node has three operations: `prep` (gather ingredients), `exec` (perform the task), and `post` (serve the dish and **decide what to make next**). Crucially, the `post` method returns an "action" string—like `"search"` or `"answer"`—that determines the next step, enabling dynamic, agent-like decision-making.
 - **Flow:** This is the recipe that directs the entire process. It reads the action from the previous Node and dictates which station to visit next. For example, "If the `DecideAction` node returns 'search', proceed to the `SearchWeb`station."
@@ -155,7 +155,7 @@ That’s it. With zero dependencies and zero vendor lock-in, this minimalist app
 ### 2. Ditching API Wrappers is a Superpower, Not a Weakness
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-8033-9656-eb2c2d22572b)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-8033-9656-eb2c2d22572b)
 
 
 **In a counter-intuitive move, Pocket Flow deliberately avoids bundling vendor-specific APIs like OpenAI or Gemini wrappers.** While other frameworks see this as a core feature, Pocket Flow argues it introduces more problems than it solves. This is like choosing a versatile chef's knife over a drawer full of single-purpose gadgets like an avocado slicer. The reasoning comes down to three key points:
@@ -164,13 +164,13 @@ That’s it. With zero dependencies and zero vendor lock-in, this minimalist app
 - **Flexibility:** By avoiding built-in wrappers, developers are freed from vendor lock-in. You can easily switch to the latest open-source models, use a fine-tuned endpoint, or run a model locally without fighting the framework's architecture.
 - **Full Control:** When you own the API call, you have complete control. Implementing custom logic for critical features like prompt caching, request batching, or response streaming becomes straightforward instead of a battle against pre-baked, rigid abstractions.
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-8009-b382-ca3c56fc5560)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-8009-b382-ca3c56fc5560)
 
 
 ### 3. Stop Wrapping APIs, Start Instructing Agents
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-80a0-a8d4-c3eed2d07ab6)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-80a0-a8d4-c3eed2d07ab6)
 
 
 **The true vision behind Pocket Flow's minimalist design is to enable "Agentic Coding"—a new paradigm of human-AI collaboration.** Forget the hype about no-code platforms replacing developers. The future is about humans and AI working together, each playing to their strengths.
@@ -179,7 +179,7 @@ That’s it. With zero dependencies and zero vendor lock-in, this minimalist app
 This paradigm is best understood with an analogy: building a house.
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-802d-9129-ecd83d0dae55)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-802d-9129-ecd83d0dae55)
 
 
 The key mechanism making this possible is **"Documentation as the second codebase."** This is where the minimalist design shines. The simplicity of the `Node/Flow/Shared Store` model is precisely what makes it legible to an AI agent. A complex, 100,000-line framework is a black box, but a system built on these simple, documented primitives becomes an instruction manual for an AI partner.
@@ -188,13 +188,13 @@ The key mechanism making this possible is **"Documentation as the second codeba
 The practical implementation of this is a design document, often `docs/design.md`, where the human architect lays out the blueprint. This document is the "master recipe" that an AI "sous-chef" can read and execute, generating perfectly customized solutions on the fly.
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-8046-9bef-e1097d4929a1)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-8046-9bef-e1097d4929a1)
 
 
 ### 4. Your Most Valuable Skill is No Longer Coding —> It's Thinking
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-8056-871d-f022eb09e4fa)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-8056-871d-f022eb09e4fa)
 
 
 **The final, and perhaps most important, lesson from Pocket Flow is a grounding principle against the hype of AI replacing developers.** The "Agentic Coding" methodology doesn't diminish the human's role; it elevates it. By offloading tedious implementation to AI agents, the developer's primary responsibility shifts to where it matters most: system design.
@@ -215,7 +215,7 @@ This underscores a fundamental truth about the future of software development. T
 Pocket Flow's 100-line experiment is more than an exercise in minimalism. It’s a challenge to how we think about building software. By stripping away complexity, we don't just get smaller codebases; we unlock a fundamental shift in the developer's role from a low-level builder to a high-level architect of intelligent systems.
 
 
-![](https://prg-sh-notion-hugo.pages.dev//api?block_id=2dee1f04-2488-8054-a32a-e21e75a41bf8)
+![](https://prg-sh-notion-hugo.pages.dev/api?block_id=2dee1f04-2488-8054-a32a-e21e75a41bf8)
 
 
 It leaves us with a forward-looking question. Instead of asking what new features a framework can give us, maybe the real question is: what can we strip away to make it simple enough for our AI partners to build _with_ us?

@@ -1,7 +1,7 @@
 import { UserConfig } from "./src/config"
 
 const userConfig: UserConfig = {
-    base_url: "https://prg-sh-notion-hugo.pages.dev/",
+    base_url: "https://prg-sh-notion-hugo.pages.dev",
     mount: {
         manual: false,
         page_url: 'https://watery-sapphire-0d4.notion.site/Notion-Hugo-2dee1f042488815e9c02db353ec3fcf0',
