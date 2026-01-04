@@ -54,7 +54,7 @@
 
 ### Implementation for User Story 1
 
-- [ ] T008 [US1] Configure article display settings in config/_default/params.toml ([article] section: showDate, showAuthor, showTaxonomies, showTableOfContents, showReadingTime)
+- [x] T008 [US1] Configure article display settings in config/_default/params.toml ([article] section: showDate, showAuthor, showTaxonomies, showTableOfContents, showReadingTime)
 - [ ] T009 [US1] Configure list display settings in config/_default/params.toml ([list] section: showDate, showSummary)
 - [ ] T010 [US1] Configure taxonomy pages in config/_default/params.toml ([taxonomy] and [term] sections)
 - [ ] T011 [US1] Run `hugo server` and verify homepage displays with Blowfish styling
