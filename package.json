@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "private": true,
   "license": "GPL-3.0-only",
-  "homepage": "https://github.com/Hugo-DoIt/Notion-DoIt",
+  "homepage": "https://github.com/fugitivexyz/prg.sh-notion-hugo",
   "bugs": {
-    "url": "https://github.com/Hugo-DoIt/Notion-DoIt/issues"
+    "url": "https://github.com/fugitivexyz/prg.sh-notion-hugo/issues"
   },
   "engines": {
     "node": ">=16",

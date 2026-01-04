@@ -4,3 +4,8 @@ dist
 resources
 .hugo_build.lock
 public
+
+# Development tooling
+.claude/
+.serena/
+.specify/

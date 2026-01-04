@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://prg-sh-notion-hugo.pages.dev/"
 languageCode = "en-us"
 # [en, zh-cn, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
