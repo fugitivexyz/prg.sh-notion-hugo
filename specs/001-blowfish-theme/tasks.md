@@ -78,7 +78,7 @@
 - [x] T016 [US2] Run `npm run format` to format code
 - [x] T017 [US2] Run `npm start` to test sync with Notion (requires NOTION_TOKEN)
 - [x] T018 [US2] Verify generated Markdown files have `featureimage` field instead of `featuredImage`
-- [ ] T019 [US2] Verify NOTION_METADATA and MANAGED_BY_NOTION_HUGO flags are preserved in front matter
+- [x] T019 [US2] Verify NOTION_METADATA and MANAGED_BY_NOTION_HUGO flags are preserved in front matter
 
 **Checkpoint**: User Story 2 complete - sync produces Blowfish-compatible content
 
