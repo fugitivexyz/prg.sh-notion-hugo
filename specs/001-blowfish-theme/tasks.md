@@ -38,8 +38,8 @@
 **⚠️ CRITICAL**: No user story can be fully tested until this phase is complete
 
 - [x] T004 Rename config/_default/config.toml to config/_default/hugo.toml and remove `theme = "DoIt"` line
-- [ ] T005 [P] Create Blowfish parameters configuration in config/_default/params.toml (colorScheme, defaultAppearance, autoSwitchAppearance, homepage layout)
-- [ ] T006 [P] Rename config/_default/languages.toml to config/_default/languages.en.toml with Blowfish format
+- [x] T005 [P] Create Blowfish parameters configuration in config/_default/params.toml (colorScheme, defaultAppearance, autoSwitchAppearance, homepage layout)
+- [x] T006 [P] Rename config/_default/languages.toml to config/_default/languages.en.toml with Blowfish format
 - [ ] T007 Verify Hugo builds without errors using `hugo` command
 
 **Checkpoint**: Foundation ready - theme is installed and basic configuration complete

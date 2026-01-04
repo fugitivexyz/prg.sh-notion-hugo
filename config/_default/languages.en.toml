@@ -1,0 +1,17 @@
+# Blowfish Language Configuration (English)
+# https://blowfish.page/docs/configuration/
+
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "My New Hugo Site"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = ""
+  secondaryLogo = ""
+  description = ""
+  copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."

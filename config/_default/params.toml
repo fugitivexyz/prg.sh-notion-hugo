@@ -1,427 +1,122 @@
-# DoIt theme version
-version = "0.3.X"
-# site default theme ("light", "dark", "black", "auto")
-defaultTheme = "auto"
-# public git repo url only then enableGitInfo is true
-gitRepo = ""
-# which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
-fingerprint = ""
-# date format
+# Blowfish Theme Parameters
+# https://blowfish.page/docs/configuration/
+
+# Color scheme
+colorScheme = "blowfish"
+
+# Appearance settings
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+# Enable search
+enableSearch = true
+
+# Date format
 dateFormat = "2006-01-02"
-# website images for Open Graph and Twitter Cards
-images = ["/images/avatar.webp"]
-# enable PWA
-enablePWA = false
-# license information (HTML format is supported)
-license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-# [Experimental] Bundle js
-bundle = false
 
+# Main sections (where blog posts are)
+mainSections = ["posts"]
+
+# Author configuration
 [author]
-name = ""
-email = ""
-link = ""
-avatar = "/images/avatar.webp"
-gravatarEmail = ""
+  name = ""
+  image = "/images/avatar.webp"
+  headline = ""
+  bio = ""
+  links = []
 
-# Header config
-[header]
-# desktop header mode ("fixed", "normal", "auto")
-desktopMode = "fixed"
-# mobile header mode ("fixed", "normal", "auto")
-mobileMode = "auto"
-# theme change mode ("switch", "select")
-themeChangeMode = "select"
+# Homepage configuration
+[homepage]
+  layout = "page"
+  homepageImage = ""
+  showRecent = true
+  showRecentItems = 10
+  showMoreLink = true
+  showMoreLinkDest = "/posts"
+  cardView = false
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = false
 
-# Header title config
-[header.title]
-# URL of the LOGO
-logo = ""
-# title name
-name = ""
-# you can add extra information before the name (HTML format is supported), such as icons
-pre = ""
-# you can add extra information after the name (HTML format is supported), such as icons
-post = ""
-# whether to use typeit animation for title name
-typeit = false
+# Article configuration
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = false
+  showDateUpdated = true
+  showAuthor = true
+  showAuthorBottom = false
+  showHero = true
+  heroStyle = "background"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 3
+  showTaxonomies = true
+  showAuthorsBadges = false
+  showWordCount = false
+  sharingLinks = ["twitter", "linkedin", "reddit", "email"]
+  showZenMode = false
 
-# Footer config
-[footer]
-enable = true
-# Custom content (HTML format is supported)
-custom = ''
-# whether to show Hugo and theme info
-hugo = true
-# Hosted on (HTML format is supported)
-hostedOn = ''
-# whether to show copyright info
-copyright = true
-# whether to show the author
-author = true
-# site creation time
-since = 2025
-# ICP info only in China (HTML format is supported)
-icp = ""
-# license info (HTML format is supported)
-license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
-# Section (all posts) page config
-[section]
-# special amount of posts in each section page
-paginate = 20
-# date format (month and day)
-dateFormat = "01-02"
-# amount of RSS pages
-rss = 10
-
-# recently updated posts settings
-[section.recentlyUpdated]
-days = 30
-enable = true
-maxCount = 10
-rss = true
-
-# List (category or tag) page config
+# List configuration
 [list]
-# special amount of posts in each list page
-paginate = 20
-# date format (month and day)
-dateFormat = "01-02"
-# amount of RSS pages
-rss = 10
+  showHero = false
+  heroStyle = "background"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
+  showBreadcrumbs = false
+  showSummary = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+  showCards = false
+  orderByWeight = false
+  groupByYear = true
+  cardView = false
+  cardViewScreenWidth = false
 
-# Page config
-[page]
-# whether to hide a page from home page
-hiddenFromHomePage = false
-# whether to hide a page from search results
-hiddenFromSearch = false
-# whether to enable twemoji
-twemoji = false
-# whether to enable lightgallery
-lightgallery = false
-# whether to enable the ruby extended syntax
-ruby = true
-# whether to enable the fraction extended syntax
-fraction = true
-# whether to show link to Raw Markdown content of the content
-linkToMarkdown = false
-# configure the link to view source the post
-linkToSource = ""
-# configure the link to edit the post
-linkToEdit = ""
-# configure the link to report issue for the post
-linkToReport = ""
-# whether to show the full text content in RSS
-rssFullText = false
-# Page style ("normal", "wide")
-pageStyle = "normal"
-# whether to enable series navigation
-seriesNavigation = true
+# Taxonomy configuration
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  heroStyle = "background"
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
 
-# Display a message at the beginning of an article to warn the reader that its content might be outdated.
-[page.outdatedArticleReminder]
-enable = false
-# Display the reminder if the last modified time is more than 90 days ago.
-reminder = 90
-# Display warning if the last modified time is more than 180 days ago.
-warning = 180
+# Term configuration
+[term]
+  showHero = false
+  heroStyle = "background"
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+  groupByYear = false
+  cardView = false
+  cardViewScreenWidth = false
 
-# Table of the contents config
-[page.toc]
-# whether to enable the table of the contents
-enable = true
-# whether to keep the static table of the contents in front of the post
-keepStatic = false
-# whether to make the table of the contents in the sidebar automatically collapsed
-auto = true
+# Header configuration
+[header]
+  layout = "basic"
+  logo = ""
+  logoDark = ""
+  showTitle = true
 
-# Code config
-[page.code]
-# whether to show the copy button of the code block
-copy = true
-# the maximum number of lines of displayed code by default
-maxShownLines = 10
-
-# Table config
-[page.table]
-# whether to enable sorting in the tables
-sort = true
-
-[page.header]
-# whether to enable auto header numbering
-[page.header.number]
-enable = false
-[page.header.number.format]
-h2 = "{h2} {title}"
-h3 = "{h2}.{h3} {title}"
-h4 = "{h2}.{h3}.{h4} {title}"
-h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-
-# KaTeX mathematical formulas config (KaTeX https://katex.org/)
-[page.math]
-enable = true
-# default block delimiter is $$ ... $$ and \\[ ... \\]
-blockLeftDelimiter = "\\["
-blockRightDelimiter = "\\]"
-# default inline delimiter is $ ... $ and \\( ... \\)
-inlineLeftDelimiter = "\\("
-inlineRightDelimiter = "\\)"
-# KaTeX extension copy_tex
-copyTex = true
-# KaTeX extension mhchem
-mhchem = true
-
-# Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-[page.mapbox]
-# access token of Mapbox GL JS
-accessToken = ""
-# style for the light theme
-lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
-# style for the dark theme
-darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
-# whether to add NavigationControl
-navigation = true
-# whether to add GeolocateControl
-geolocate = true
-# whether to add ScaleControl
-scale = true
-# whether to add FullscreenControl
-fullscreen = true
-
-# Social share links in post page
-[page.share]
-enable = true
-Twitter = true
-Facebook = true
-Linkedin = true
-Reddit = true
-HackerNews = true
-Telegram = true
-Whatsapp = false
-Pinterest = false
-
-# Comment config
-[page.comment]
-enable = false
-
-# Disqus comment config (https://disqus.com/)
-[page.comment.disqus]
-enable = false
-shortname = ""
-
-# Gitalk comment config (https://github.com/gitalk/gitalk)
-[page.comment.gitalk]
-enable = false
-clientId = ""
-clientSecret = ""
-owner = ""
-repo = ""
-
-# Valine comment config (https://github.com/xCss/Valine)
-[page.comment.valine]
-enable = false
-appId = ""
-appKey = ""
-avatar = "mp"
-enableQQ = false
-highlight = true
-lang = "en"
-meta = ""
-pageSize = 10
-placeholder = ""
-recordIP = false
-serverURLs = ""
-visitor = true
-emoji = ""
-
-# Waline comment config (https://waline.js.org)
-[page.comment.waline]
-enable = false
-comment = true
-pageview = true
-serverURL = ""
-
-# Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-[page.comment.facebook]
-enable = false
-appId = ""
-languageCode = ""
-numPosts = 10
-width = "100%"
-
-# Telegram comments config (https://comments.app/)
-[page.comment.telegram]
-enable = false
-color = ""
-colorful = true
-dark = false
-dislikes = false
-height = ""
-limit = 5
-outlined = false
-siteID = ""
-
-# Commento comment config (https://commento.io/)
-[page.comment.commento]
-enable = false
-
-# Utterances comment config (https://utteranc.es/)
-[page.comment.utterances]
-enable = false
-darkTheme = "github-dark"
-issueTerm = "pathname"
-label = ""
-lightTheme = "github-light"
-repo = ""
-
-# Twikoo comment config (https://twikoo.js.org/)
-[page.comment.twikoo]
-enable = false
-commentCount = true
-envId = ""
-path = ""
-region = ""
-visitor = true
-
-# Vssue comment config (https://vssue.js.org/)
-[page.comment.vssue]
-enable = false
-clientId = ""
-clientSecret = ""
-owner = ""
-platform = ""
-repo = ""
-
-# Remark42 comment config (https://remark42.com/)
-[page.comment.remark42]
-enable = false
-host = ""
-max_shown_comments = 15
-show_email_subscription = true
-simple_view = false
-site_id = ""
-
-# giscus comment config (https://giscus.app/)
-[page.comment.giscus]
-enable = false
-darkTheme = "dark"
-dataCategory = ""
-dataCategoryId = ""
-dataEmitMetadata = "0"
-dataInputPosition = "bottom"
-dataLang = "en"
-dataMapping = "pathname"
-dataReactionsEnabled = "1"
-dataRepo = ""
-dataRepoId = ""
-dataStrict = "0"
-lightTheme = "light"
-
-# Third-party library config
-[page.library]
-[page.library.css]
-[page.library.js]
-
-# Page SEO config
-[page.seo]
-# image URL
-images = []
-# Publisher info
-[page.seo.publisher]
-logoUrl = "/images/avatar.webp"
-name = ""
-
-# Related content config
-[page.related]
-count = 5
-enable = true
-
-# Sponsor config
-[sponsor]
-enable = false
-bio = "If you find this post helpful, please consider sponsoring."
-link = ""
-
-# TypeIt config
-[typeit]
-# typing speed between each step (measured in milliseconds)
-speed = 100
-# blinking speed of the cursor (measured in milliseconds)
-cursorSpeed = 1000
-# character used for the cursor (HTML format is supported)
-cursorChar = "|"
-# cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-duration = -1
-
-# Site verification code for Google/Bing/Yandex/Pinterest/Baidu
-[verification]
-baidu = ""
-bing = ""
-google = ""
-pinterest = ""
-so = ""
-sogou = ""
-yandex = ""
-
-# Site SEO config
-[seo]
-# image URL
-image = ""
-# thumbnail URL
-thumbnailUrl = ""
-
-# Analytics config
-[analytics]
-enable = false
-
-# Google Analytics
-[analytics.google]
-id = ""
-# whether to anonymize IP
-anonymizeIP = true
-
-# Fathom Analytics
-[analytics.fathom]
-id = ""
-server = ""
-
-# Baidu Analytics
-[analytics.baidu]
-id = ""
-
-# Umami Analytics
-[analytics.umami]
-data_domains = ""
-data_website_id = ""
-src = ""
-
-# Plausible Analytics
-[analytics.plausible]
-data_domain = ""
-src = ""
-
-# Cloudflare Analytics
-[analytics.cloudflare]
-token = ""
-
-# Cookie consent config
-[cookieconsent]
-enable = false
-[cookieconsent.content]
-dismiss = ""
-link = ""
-message = ""
-
-# CDN config for third-party library files
-[cdn]
-data = ""
-
-# Compatibility config
-[compatibility]
-# whether to use Polyfill.io to be compatible with older browsers
-polyfill = false
-# whether to use object-fit-images to be compatible with older browsers
-objectFit = false
+# Footer configuration
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
