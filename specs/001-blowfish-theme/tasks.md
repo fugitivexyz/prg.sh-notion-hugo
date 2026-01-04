@@ -127,9 +127,9 @@
 
 ### Verification for User Story 5
 
-- [ ] T029 [US5] View page source of homepage and verify Open Graph meta tags present (og:title, og:description, og:image)
-- [ ] T030 [US5] View page source of a blog post and verify Twitter Card meta tags present
-- [ ] T031 [US5] Verify featured images appear in social sharing meta tags
+- [x] T029 [US5] View page source of homepage and verify Open Graph meta tags present (og:title, og:description, og:image)
+- [x] T030 [US5] View page source of a blog post and verify Twitter Card meta tags present
+- [x] T031 [US5] Verify featured images appear in social sharing meta tags
 
 **Checkpoint**: User Story 5 complete - SEO and social sharing preserved
 
