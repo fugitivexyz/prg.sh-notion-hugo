@@ -27,7 +27,7 @@
 
 - [x] T001 Initialize Hugo modules with `hugo mod init github.com/prg.sh/notion-hugo` at repository root
 - [x] T002 Create Hugo module import configuration in config/_default/module.toml
-- [ ] T003 Run `hugo mod get -u` to download Blowfish theme module
+- [x] T003 Run `hugo mod get -u` to download Blowfish theme module
 
 ---
 
