@@ -1,0 +1,99 @@
+[en]
+  weight = 1
+  languageCode = "en"
+  languageName = "English"
+  hasCJKLanguage = false
+  copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+  # Menu config
+  [en.menu]
+    [[en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [[en.menu.main]]
+      identifier = "about"
+      pre = ""
+      post = ""
+      name = "About"
+      url = "/about/"
+      title = ""
+      weight = 4
+
+  [en.params]
+    # site description
+    description = ""
+    # site keywords
+    keywords = []
+    # App icon config
+    [en.params.app]
+      title = ""
+      noFavicon = false
+      svgFavicon = ""
+      iconColor = "#5bbad5"
+      tileColor = "#da532c"
+    # Search config
+    [en.params.search]
+      enable = true
+      # type of search engine ("lunr", "algolia", "fuse")
+      type = "lunr"
+      # max index length of the chunked content
+      contentLength = 4000
+      placeholder = ""
+      maxResultLength = 10
+      snippetLength = 300
+      highlightTag = "em"
+      absoluteURL = false
+      [en.params.search.fuse]
+        isCaseSensitive = false
+        minMatchCharLength = 2
+        findAllMatches = false
+        location = 0
+        threshold = 0.1
+        distance = 100
+        ignoreLocation = true
+        useExtendedSearch = false
+        ignoreFieldNorm = false
+    # Home page config
+    [en.params.home]
+      rss = 10
+      [en.params.home.profile]
+        enable = true
+        gravatarEmail = ""
+        avatarURL = "/images/avatar.webp"
+        title = ""
+        subtitle = ""
+        typeit = false
+        social = true
+        disclaimer = ""
+      [en.params.home.posts]
+        enable = true
+        paginate = 10
+    # Social config in home page
+    [en.params.social]
+      GitHub = ""
+      Linkedin = ""
+      Twitter = ""
+      Instagram = ""
+      Email = ""
+      RSS = true

@@ -1,0 +1,7 @@
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+[googleAnalytics]
+  # ...
+[twitter]
+  enableDNT = true
+[youtube]
+  privacyEnhanced = true

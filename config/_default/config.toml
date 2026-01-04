@@ -1,4 +1,13 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
+# [en, zh-cn, fr, pl, ...] determines default content language
+defaultContentLanguage = "en"
 title = "My New Hugo Site"
 theme = "DoIt"
+
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
