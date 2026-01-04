@@ -144,7 +144,7 @@
 - [x] T034 Update package.json description to reference Blowfish instead of DoIt
 - [x] T035 Run final `hugo build` and verify no warnings or errors
 - [x] T036 Run quickstart.md verification checklist to confirm all items pass
-- [ ] T037 Commit all changes with descriptive commit message
+- [x] T037 Commit all changes with descriptive commit message
 
 ---
 
