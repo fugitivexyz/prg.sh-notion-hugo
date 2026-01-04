@@ -1,7 +1,7 @@
 {
-  "name": "notion-doit",
+  "name": "notion-blowfish",
   "version": "0.0.1",
-  "description": "Use Notion as the CMS for your Hugo DoIt site",
+  "description": "Use Notion as the CMS for your Hugo Blowfish site",
   "main": "src/index.ts",
   "private": true,
   "license": "GPL-3.0-only",
@@ -24,7 +24,7 @@
     "Notion",
     "Hugo",
     "theme",
-    "DoIt"
+    "Blowfish"
   ],
   "author": "HEIGE-PCloud",
   "dependencies": {
