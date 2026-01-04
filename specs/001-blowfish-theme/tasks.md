@@ -139,7 +139,7 @@
 
 **Purpose**: Remove DoIt references, final verification, documentation updates
 
-- [ ] T032 [P] Remove themes/DoIt directory if exists (legacy submodule)
+- [x] T032 [P] Remove themes/DoIt directory if exists (legacy submodule)
 - [ ] T033 [P] Remove config/DoIt directory if exists (legacy overrides)
 - [ ] T034 Update package.json description to reference Blowfish instead of DoIt
 - [ ] T035 Run final `hugo build` and verify no warnings or errors
