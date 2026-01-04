@@ -30,10 +30,10 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     draft: false,
   };
 
-  // set featuredImage
+  // set featureimage (Blowfish theme uses lowercase field name)
   const featuredImageLink = await getCoverLink(page.id, notion);
   if (featuredImageLink) {
-    frontMatter.featuredImage = featuredImageLink;
+    frontMatter.featureimage = featuredImageLink;
   }
 
   // map page properties to front matter

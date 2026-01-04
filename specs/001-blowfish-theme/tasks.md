@@ -73,7 +73,7 @@
 
 ### Implementation for User Story 2
 
-- [ ] T014 [US2] Update front matter field mapping in src/render.ts: change `featuredImage` to `featureimage` at line ~36
+- [x] T014 [US2] Update front matter field mapping in src/render.ts: change `featuredImage` to `featureimage` at line ~36
 - [ ] T015 [US2] Run `npm run typecheck` to verify TypeScript compiles without errors
 - [ ] T016 [US2] Run `npm run format` to format code
 - [ ] T017 [US2] Run `npm start` to test sync with Notion (requires NOTION_TOKEN)
