@@ -58,7 +58,7 @@
 - [x] T009 [US1] Configure list display settings in config/_default/params.toml ([list] section: showDate, showSummary)
 - [x] T010 [US1] Configure taxonomy pages in config/_default/params.toml ([taxonomy] and [term] sections)
 - [x] T011 [US1] Run `hugo server` and verify homepage displays with Blowfish styling
-- [ ] T012 [US1] Verify individual blog post pages render correctly with article layout
+- [x] T012 [US1] Verify individual blog post pages render correctly with article layout
 - [ ] T013 [US1] Audit content/ directory for DoIt-specific shortcodes and convert to Blowfish equivalents or standard Markdown
 
 **Checkpoint**: User Story 1 complete - site renders with Blowfish theme, posts display correctly
