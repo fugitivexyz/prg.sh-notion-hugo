@@ -95,7 +95,7 @@
 - [x] T020 [US3] Create menu configuration in config/_default/menus.en.toml (Posts, Tags, Categories, About)
 - [x] T021 [US3] Verify search is enabled in config/_default/params.toml (enableSearch = true)
 - [x] T022 [US3] Verify dark/light mode is configured in config/_default/params.toml (defaultAppearance = "light", autoSwitchAppearance = true)
-- [ ] T023 [US3] Run `hugo server` and test menu navigation works
+- [x] T023 [US3] Run `hugo server` and test menu navigation works
 - [ ] T024 [US3] Test search functionality finds posts by title or content
 - [ ] T025 [US3] Test dark/light mode toggle switches appearance correctly
 
