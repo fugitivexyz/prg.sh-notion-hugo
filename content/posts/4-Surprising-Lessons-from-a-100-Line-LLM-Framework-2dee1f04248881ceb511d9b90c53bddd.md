@@ -1,7 +1,7 @@
 ---
 title: "4 Surprising Lessons from a 100- Line LLM Framework"
 date: "2026-01-04T13:49:00.000Z"
-lastmod: "2026-01-04T22:13:00.000Z"
+lastmod: "2026-01-04T22:25:00.000Z"
 draft: false
 featureimage: "https://www.notion.so/images/page-cover/woodcuts_1.jpg"
 series: []
@@ -12,12 +12,13 @@ tags:
   - "LLM"
   - "Agents"
   - "AI"
-categories: []
+categories:
+  - "Agentic AI"
 NOTION_METADATA:
   object: "page"
   id: "2dee1f04-2488-81ce-b511-d9b90c53bddd"
   created_time: "2026-01-04T13:49:00.000Z"
-  last_edited_time: "2026-01-04T22:13:00.000Z"
+  last_edited_time: "2026-01-04T22:25:00.000Z"
   created_by:
     object: "user"
     id: "65433cf3-8806-4489-8d3a-04127698c103"
@@ -90,11 +91,14 @@ NOTION_METADATA:
     categories:
       id: "nbY%3F"
       type: "multi_select"
-      multi_select: []
+      multi_select:
+        - id: "4e62313e-af34-42db-b95c-e061f6f2129d"
+          name: "Agentic AI"
+          color: "blue"
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-01-04T22:13:00.000Z"
+      last_edited_time: "2026-01-04T22:25:00.000Z"
     summary:
       id: "x%3AlD"
       type: "rich_text"
