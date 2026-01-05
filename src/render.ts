@@ -136,8 +136,9 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
 
   // apply page-specific front matter overrides from config
   const pageId = page.id;
-  if (global.pageOverrides && global.pageOverrides[pageId]) {
-    Object.assign(frontMatter, global.pageOverrides[pageId]);
+  const override = global.pageOverrides?.[pageId];
+  if (override && typeof override === "object" && !Array.isArray(override)) {
+    Object.assign(frontMatter, override);
   }
 
   // save metadata

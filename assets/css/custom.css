@@ -1,0 +1,19 @@
+/* Notion Column Layouts */
+.notion-columns {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.notion-column {
+  min-width: 0; /* Prevent overflow */
+}
+
+/* Responsive column layouts - desktop only */
+@media (min-width: 768px) {
+  .notion-columns-2 { grid-template-columns: repeat(2, 1fr); }
+  .notion-columns-3 { grid-template-columns: repeat(3, 1fr); }
+  .notion-columns-4 { grid-template-columns: repeat(4, 1fr); }
+  .notion-columns-5 { grid-template-columns: repeat(5, 1fr); }
+}

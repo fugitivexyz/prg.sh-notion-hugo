@@ -457,12 +457,6 @@ export class NotionToMarkdown {
         return md.audio(block);
       case "template":
       case "synced_block":
-      case "child_page":
-      case "child_database":
-      case "column":
-      case "link_preview":
-      case "column_list":
-      case "link_to_page":
       case "breadcrumb":
       case "unsupported":
       case "table_of_contents":
