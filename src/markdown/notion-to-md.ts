@@ -317,6 +317,11 @@ export class NotionToMarkdown {
 
         const columnCount = column_list_children.length;
 
+        // Handle empty column list
+        if (columnCount === 0) {
+          return "";
+        }
+
         // Single column doesn't need grid wrapper
         if (columnCount === 1) {
           const singleColumn = await this.blockToMarkdown(
