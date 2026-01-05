@@ -135,10 +135,21 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   }
 
   // apply page-specific front matter overrides from config
+  // Protected fields cannot be overridden for security/consistency
+  const PROTECTED_FIELDS = new Set([
+    "NOTION_METADATA",
+    "MANAGED_BY_NOTION_HUGO",
+    "date",
+    "lastmod",
+  ]);
   const pageId = page.id;
   const override = global.pageOverrides?.[pageId];
   if (override && typeof override === "object" && !Array.isArray(override)) {
-    Object.assign(frontMatter, override);
+    for (const [key, value] of Object.entries(override)) {
+      if (!PROTECTED_FIELDS.has(key)) {
+        frontMatter[key] = value as string | string[] | number | boolean;
+      }
+    }
   }
 
   // save metadata
