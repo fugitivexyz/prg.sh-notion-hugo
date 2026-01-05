@@ -315,18 +315,43 @@ export class NotionToMarkdown {
           100,
         );
 
+        const columnCount = column_list_children.length;
+
+        // Handle empty column list
+        if (columnCount === 0) {
+          return "";
+        }
+
+        // Single column doesn't need grid wrapper
+        if (columnCount === 1) {
+          const singleColumn = await this.blockToMarkdown(
+            column_list_children[0],
+          );
+          return singleColumn;
+        }
+
+        // Clamp column count to supported range (2-5)
+        let clampedCount = columnCount;
+        if (columnCount > 5) {
+          console.warn(
+            `[Warning] Column count ${columnCount} exceeds maximum of 5. Clamping to 5.`,
+          );
+          clampedCount = 5;
+        }
+
         let column_list_promise = column_list_children.map(
           async (column) => await this.blockToMarkdown(column),
         );
 
         let column_list: string[] = await Promise.all(column_list_promise);
 
-        return column_list.join("\n\n");
+        // Wrap in Hugo shortcode for grid layout
+        return `{{< columns count="${clampedCount}" >}}\n${column_list.join("\n")}\n{{< /columns >}}`;
       }
 
       case "column": {
         const { id, has_children } = block;
-        if (!has_children) return "";
+        if (!has_children) return "{{< column >}}\n{{< /column >}}";
 
         const column_children = await getBlockChildren(
           this.notionClient,
@@ -339,7 +364,8 @@ export class NotionToMarkdown {
         );
 
         let column: string[] = await Promise.all(column_children_promise);
-        return column.join("\n\n");
+        const columnContent = column.join("\n\n");
+        return `{{< column >}}\n${columnContent}\n{{< /column >}}`;
       }
 
       case "toggle": {
@@ -445,12 +471,6 @@ export class NotionToMarkdown {
         return md.audio(block);
       case "template":
       case "synced_block":
-      case "child_page":
-      case "child_database":
-      case "column":
-      case "link_preview":
-      case "column_list":
-      case "link_to_page":
       case "breadcrumb":
       case "unsupported":
       case "table_of_contents":

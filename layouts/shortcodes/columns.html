@@ -1,0 +1,11 @@
+{{- $rawCount := .Get "count" | default 2 | int -}}
+{{- $count := $rawCount -}}
+{{- /* Clamp column count to valid range (2-5) */ -}}
+{{- if lt $count 2 }}{{ $count = 2 }}{{ end -}}
+{{- if gt $count 5 }}{{ $count = 5 }}{{ end -}}
+{{- if ne $rawCount $count }}
+<!-- Warning: Column count {{ $rawCount }} clamped to {{ $count }} (valid range: 2-5) -->
+{{- end -}}
+<div class="notion-columns notion-columns-{{ $count }}">
+  {{ .Inner }}
+</div>

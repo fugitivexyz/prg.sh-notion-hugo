@@ -134,6 +134,46 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     }
   }
 
+  // apply page-specific front matter overrides from config
+  // Protected fields cannot be overridden for security/consistency
+  const PROTECTED_FIELDS = new Set([
+    "NOTION_METADATA",
+    "MANAGED_BY_NOTION_HUGO",
+    "date",
+    "lastmod",
+  ]);
+  const pageId = page.id;
+  const override = global.pageOverrides?.[pageId];
+  if (override && typeof override === "object" && !Array.isArray(override)) {
+    for (const [key, value] of Object.entries(override)) {
+      if (PROTECTED_FIELDS.has(key)) {
+        console.warn(
+          `[Warning] Cannot override protected field "${key}" on page ${pageId}. Skipping.`,
+        );
+        continue;
+      }
+      // Validate value type at runtime - only allow primitives and string arrays
+      const valueType = typeof value;
+      if (
+        valueType === "string" ||
+        valueType === "number" ||
+        valueType === "boolean"
+      ) {
+        frontMatter[key] = value as string | number | boolean;
+      } else if (
+        Array.isArray(value) &&
+        value.every((item) => typeof item === "string")
+      ) {
+        frontMatter[key] = value as string[];
+      } else {
+        console.warn(
+          `[Warning] Invalid pageOverride value type for "${key}" on page ${pageId}. ` +
+            `Expected string, number, boolean, or string[]. Skipping.`,
+        );
+      }
+    }
+  }
+
   // save metadata
   frontMatter.NOTION_METADATA = page;
   frontMatter.MANAGED_BY_NOTION_HUGO = true;
