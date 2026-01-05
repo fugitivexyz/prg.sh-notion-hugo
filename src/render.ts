@@ -147,6 +147,9 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   if (override && typeof override === "object" && !Array.isArray(override)) {
     for (const [key, value] of Object.entries(override)) {
       if (PROTECTED_FIELDS.has(key)) {
+        console.warn(
+          `[Warning] Cannot override protected field "${key}" on page ${pageId}. Skipping.`,
+        );
         continue;
       }
       // Validate value type at runtime - only allow primitives and string arrays

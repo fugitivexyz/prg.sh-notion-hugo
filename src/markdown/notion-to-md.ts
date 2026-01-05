@@ -330,6 +330,15 @@ export class NotionToMarkdown {
           return singleColumn;
         }
 
+        // Clamp column count to supported range (2-5)
+        let clampedCount = columnCount;
+        if (columnCount > 5) {
+          console.warn(
+            `[Warning] Column count ${columnCount} exceeds maximum of 5. Clamping to 5.`,
+          );
+          clampedCount = 5;
+        }
+
         let column_list_promise = column_list_children.map(
           async (column) => await this.blockToMarkdown(column),
         );
@@ -337,7 +346,7 @@ export class NotionToMarkdown {
         let column_list: string[] = await Promise.all(column_list_promise);
 
         // Wrap in Hugo shortcode for grid layout
-        return `{{< columns count="${columnCount}" >}}\n${column_list.join("\n")}\n{{< /columns >}}`;
+        return `{{< columns count="${clampedCount}" >}}\n${column_list.join("\n")}\n{{< /columns >}}`;
       }
 
       case "column": {
