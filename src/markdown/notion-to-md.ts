@@ -315,18 +315,29 @@ export class NotionToMarkdown {
           100,
         );
 
+        const columnCount = column_list_children.length;
+
+        // Single column doesn't need grid wrapper
+        if (columnCount === 1) {
+          const singleColumn = await this.blockToMarkdown(
+            column_list_children[0],
+          );
+          return singleColumn;
+        }
+
         let column_list_promise = column_list_children.map(
           async (column) => await this.blockToMarkdown(column),
         );
 
         let column_list: string[] = await Promise.all(column_list_promise);
 
-        return column_list.join("\n\n");
+        // Wrap in Hugo shortcode for grid layout
+        return `{{< columns count="${columnCount}" >}}\n${column_list.join("\n")}\n{{< /columns >}}`;
       }
 
       case "column": {
         const { id, has_children } = block;
-        if (!has_children) return "";
+        if (!has_children) return "{{< column >}}\n{{< /column >}}";
 
         const column_children = await getBlockChildren(
           this.notionClient,
@@ -339,7 +350,8 @@ export class NotionToMarkdown {
         );
 
         let column: string[] = await Promise.all(column_children_promise);
-        return column.join("\n\n");
+        const columnContent = column.join("\n\n");
+        return `{{< column >}}\n${columnContent}\n{{< /column >}}`;
       }
 
       case "toggle": {

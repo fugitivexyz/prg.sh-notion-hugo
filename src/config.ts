@@ -3,7 +3,10 @@ import { Client, isFullBlock, iteratePaginatedAPI } from "@notionhq/client";
 declare global {
   var blockIdToApiUrl: (block_id: string) => string;
   var pageIdToApiUrl: (page_id: string) => string;
+  var pageOverrides: PageFrontMatterOverrides;
 }
+
+export type PageFrontMatterOverrides = Record<string, Record<string, unknown>>;
 
 import userDefinedConfig from "../notion-hugo.config";
 
@@ -40,6 +43,7 @@ export async function loadConfig(): Promise<Config> {
   global.pageIdToApiUrl = function (page_id: string) {
     return `${userConfig.base_url}/api?page_id=${page_id}`;
   }
+  global.pageOverrides = userConfig.pageOverrides || {};
 
   // configure mount settings
   if (userConfig.mount.manual) {
@@ -91,6 +95,7 @@ export type UserMount = {
 export type UserConfig = {
   mount: UserMount;
   base_url: string;
+  pageOverrides?: PageFrontMatterOverrides;
 };
 
 export function defineConfig(config: UserConfig) {

@@ -134,6 +134,12 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     }
   }
 
+  // apply page-specific front matter overrides from config
+  const pageId = page.id;
+  if (global.pageOverrides && global.pageOverrides[pageId]) {
+    Object.assign(frontMatter, global.pageOverrides[pageId]);
+  }
+
   // save metadata
   frontMatter.NOTION_METADATA = page;
   frontMatter.MANAGED_BY_NOTION_HUGO = true;

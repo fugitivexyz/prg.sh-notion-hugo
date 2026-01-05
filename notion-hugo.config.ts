@@ -2,6 +2,13 @@ import { UserConfig } from "./src/config"
 
 const userConfig: UserConfig = {
     base_url: "https://prg-sh-notion-hugo.pages.dev",
+    // Page-specific front matter overrides (by page ID)
+    pageOverrides: {
+        // About page - disable Table of Contents (no headings)
+        "2dee1f04-2488-8164-a76e-d8ae287274a6": {
+            showTableOfContents: false
+        }
+    },
     mount: {
         manual: false,
         page_url: 'https://watery-sapphire-0d4.notion.site/Notion-Hugo-2dee1f042488815e9c02db353ec3fcf0',

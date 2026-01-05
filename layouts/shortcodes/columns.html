@@ -1,0 +1,9 @@
+{{- $count := .Get "count" | default 2 -}}
+<div class="notion-columns" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; margin: 1rem 0;">
+  <style>
+    @media (min-width: 768px) {
+      .notion-columns { grid-template-columns: repeat({{ $count }}, 1fr) !important; }
+    }
+  </style>
+  {{ .Inner }}
+</div>
